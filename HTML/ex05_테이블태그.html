@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        테이블 태그
+        1) 표를 만들거야! 공간을 선언 : table 
+        2) 표의 한 줄을 생성하는 방법 : tr (table row)
+        3) 표의 한 칸 데이터를 넣어주는 공간 : tb (table data)
+     -->
+
+    <!-- <table border="1px solid black"> 
+        <tr>
+            <td>1번칸</td>
+            <td>2번칸</td>
+        </tr>
+        <tr>
+            <td>3번칸</td>
+            <td>4번칸</td>
+        </tr>
+        <tr>
+            <td>5번칸</td>
+            <td>6번칸</td>
+        </tr>
+    </table> -->
+    <!-- 기본 연습 표 끝 -->
+
+<!-- 표의 병합 기능
+    위/아래 병헙 : rowspan
+    좌우 병합  : colspan
+    rowspan "뵹병합"
+-->
+    <h1>카페메뉴 예제</h1>
+    <table border="1px solid black" width="300px">
+        <bgcolor="pink">
+            <td>메뉴</td>
+            <td>가격</td>
+            <td>특이사항</td>
+        </tr>
+        <tr>
+            <td>아메리카노</td>
+            <td>3000</td>
+            <td rowspan="3">사계절가능</td>
+        </tr>
+        <tr>
+            <td>카페라떼</td>
+            <td>3500</td>
+            <!-- <td>사계절가능</td> -->
+        </tr>
+        <tr>
+            <td>자바칩프라푸치노</td>
+            <td>4500</td>
+            <!-- <td>사계절가능</td> -->
+        </tr>
+        <tr>
+            <td colspan="3">청귤에이드 조금만 기대려주세요</td>
+            <!-- <td>4000</td> -->
+            <!-- <td>여름한정</td> -->
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

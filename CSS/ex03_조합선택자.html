@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 계층선택자 */
+        /* (1) 자손선택자 기호 : 띄어쓰기(공백) */
+        /*  (1-1) body를 기준으로 자손인 span의 색을 tomato */
+        /*  (1-2) body를 기준으로 자손인 li의 색을 blue */
+        body span{
+            color :tomato;
+        }
+        body li{
+            color: blue;
+        }
+
+        /* 자식선택자 
+            기호 : > 
+            ol을 기준으로 자식인 span의 색을 hotpink*/
+        ol>span{
+            color: hotpink;
+        }
+
+        /* (3) 형제선택자(후행선택자) 
+                기호 : ~ */
+        
+        /* li를 기준으로 형제관계인 li의 색을 lime */
+        /* 태그 이름으로 하면 모든 경우를 다 반영하기 때문에 특정 클래스를 부여해서 스타일을 적용하면 좋음 */
+        li~li{
+            color: lime;
+        }
+
+        /* ex) class가 item인 요소의 li 동생들 : .item ~li */
+        /* ex) class가 item인 요소의 모든동생들 : .item * */
+        /* ex) class가 item인 요소 기준 동생들 중 클래스가 box인 동생들 : .item ~ .box */
+
+        /* (4) 인접후행선택자(근접후행선택자)
+                기호 : +  */
+        /* li를 기준으로 인접형제인(근접해서 붙어있는 형제인) li의 색을 green */
+        li+li{
+            color:green;
+        }
+        /* 추가 */
+        /* rule이라는 클래스 가지고 있는 요소들 중, h1 태그에 해당하는 것만 선택
+            => h1.rule
+        */
+        /* rule이라는 아이디를 가지고 있는 요소들 중, h1 태그에 해당하는 것만 선택
+            => h1#rule
+        */        
+        *{
+            color: black;
+        }
+
+        /* 선택자별 명시도 */
+        /*    이름          기호        명시도 */
+        /* 전체선택자         *            0   */
+        /* 태그선택자       태그이름        1   */
+        /* 클래스선택자       .            10  */
+        /* 아이디선택자       #            100 */
+        /* 인라인스타일    태그안에정의    1000 */
+        /* !important     선언부에 정의   10000 */
+
+        /* 만약 조합선택자라면 각 선택자별 명시도를 더해서 계산 */
+
+        /* 만약 템플릿 등을 쓰느라
+        아무리 해도 명시도를 못 올리겠다 or 선택자를 못 찾겠다 하는 경우 
+        h1{
+            color : red !important
+        }
+
+        !important를 이용! 명시도는 10000
+        
+
+        *{
+            color :black !important
+        } 
+        */
+
+            /* 태그에 스타일을 정의하는 방법 중 '인라인 스타일'은
+            명시도 : 1000
+            (인라인 스타일 : 태그에 직접 스타일속성 정의)
+            <h1 style = "color:red; background-color:yellow">꾸며보자<h1>      
+        
+        */
+        
+        /* 반응선택자  
+        (1) :hover   = 요소에 마우스를 올릴 때 */
+        h2:hover{
+            background-color: skyblue;
+        }
+        /* (2) :active = 요소를 클릭하고 있는 동안 */
+        h3:active{
+            color: red;
+        }
+        h3:hover{
+            color:green;
+        }
+        
+        /* 그룹선택자 
+        원하는 요소끼리 콤마로 묶어서 한번에 선언*/
+        h1, p, span{
+            color: yellow;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <strong>나만의 간계밥 레시피</strong>
+    <ol>
+        <li>계란을 안 뒤집고 굽는다.</li>
+        <li class="listitem">밥에 간장이랑 참기름을 넣는다</li>
+        <span>짜게 만들어지지 않도록 주의할 것</span>
+        <li>계란을 넣고 깨를 많이 뿌린다</li>
+    </ol>
+    
+    <h2>가입하기</h2>
+    <h3>접속하기</h3>
+</body>
+</html>

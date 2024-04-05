@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* 내가 설정한 가로세로와 경계선 패딩 */
+            width : 300px;
+            height: 300px;
+            border: 15px solid gray;
+            padding : 20px;
+            background-color: darkturquoise;
+        }
+        /* box-sizing 요소의 크기를 화면에 표시하는 방식 
+
+        (1) content-box (기본값) 내가 설정한 너비 = 컨텐츠의 너비
+        컨텐츠의 영역만을 크기로 삼는 속성
+        패딩, 보더값이 들어가면 들어간 만큼 크기가 커진다
+
+        (2) border-box
+        내가 설정한 너비 = border 안쪽끼지의 너비
+        content + padding + border = 내가 설장한 너비
+        패딩, 보더값이 들어가도 크기는 커지지 않고,
+        컨텐츠가 작아진다.
+        
+        */
+        .bb{
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="cb">
+        <p>content-box</p></div>
+    <div class="bb">
+        <p>border-box</p></div>
+
+</body>
+</html>

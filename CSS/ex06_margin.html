@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: mediumseagreen;
+            border : 1px solid black;
+        /* margin : 테두리 기준 바깥쪽 여백  */
+            margin-top : 50px;
+            margin-left: 0px;
+        }
+
+        /* body 태그의 기본 margin이 0px         
+        body{
+            margin : 0px;
+        } */
+
+        div{
+            width : 100px;
+            height : 100px;
+            background-color: pink;
+            border: 1px solid black;
+        }
+
+        /* ⭐마진중첩현상
+        같은 형제 요소에 마진이 겹쳐서 적용되면 둘 중 큰 값의 마진으로 적용됨.
+        (누적되지 않는다)
+        10px + 10px = 15px
+        */
+        #box1{
+            margin-bottom : 20px;
+        }
+        #box2{
+            margin-top : 40px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <h3>마진예제</h3>
+    <div id="box">내용</div>
+    <div id="box1">ㅇ</div>
+    <div id="boxw">ㅇㅇ</div>
+
+</body>
+</html>

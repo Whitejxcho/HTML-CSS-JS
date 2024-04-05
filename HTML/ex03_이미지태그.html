@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        img : 이미지 태그
+        필수 속성 - src (source)
+        alt : 이미지가 잘못된 경우의 실행
+        alt+z : 주소가 길어지니까 가시에 자동줄바꿈
+        1) 절대 경로 : 고유한 경로 (외부 웹페이지/파일)
+            인터넷이 끊기면 안 보임
+    -->
+    <img src="https://cdn.onseoul.net/news/photo/202308/28617_29890_316.jpg" alt="마선호" width="300">
+
+    <!-- 2) 상대 경로 : 내가 실제로 가지고 있는 파일을 로드할 때
+        인터넷 안되도 볼 수 있는 있음
+
+        2-1) 현재 내 위치를 기준으로 바로 접근 가능 : ./
+        2-2) 상위 그준으로 접근 가능               : ../
+        2-3) 여러번 상위로 접근해야 하는 경우      : ../../
+     -->
+    <img src="../image/마선호.jpg" alt="마선호" width="400">
+
+
+</body>
+</html>

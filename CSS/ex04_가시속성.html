@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  display 가시속성
+        (1) display : block
+            무조건 가로로 한 줄의 영역을 차지하는 속성
+            div, p, h1 등등 ... => 기본값 block
+            ⭐ width. height 값 설정이 가능
+
+        (2) display : inline
+            내가 담은 콘텐츠 크기만큼만 크기로 삼는 속성
+            span, a 등등 ... => 기본값 inline
+            ⭐ width, height 값 설정이 불가능
+            why? already set size as '컨텐츠만큼'
+
+        (3) display : none
+            해당하는 요소를 눈에 보이지 않게
+            visibility : 가시속성
+            (1) visible : 눈에 보이게 함
+            (2) hidden : 눈에 보이지 않지만 자리는 그대로 차지하고 있음
+                -display none은 눈에도 X 자리도 X
+
+        */
+
+
+        p{
+            background-color:lightsteelblue;
+            display : inline
+        }
+        span{
+            background-color: antiquewhite;
+            display: block;
+        }
+
+        #answer{
+            display: none;
+        }
+
+        #question:hover+#answer{
+            display : block;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <p>p태그</p>
+    <p>p태그</p>
+    <p>p태그</p>
+
+    <span>span태그</span>
+    <span>span태그</span>
+    <span>span태그</span>
+
+    <h1 id="question">오늘 점심 뭐 드셨어요?</h1>
+    <h1 id="answer">제육 먹었어요 </h1>
+
+</body>
+</html>

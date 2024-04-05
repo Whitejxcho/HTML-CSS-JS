@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자예제</title>
+    <style>
+     /* 선택자의 종류 */
+     /* (1) 전체선택자 :  */
+         /* html 문서상 모든 요소를 선택 */
+        * {
+            color: blue;
+        }
+         /* (2) 태그 선택자 : 태그 이름 */
+        h2{
+            color :darkblue
+        }
+
+        /* (3) 클래스 선택자 : .클래스이름 */
+        .like{
+            color: pink;
+        }
+
+        /* (4) 아이디 선택시 #아이디이름 */
+        #nap{
+            color : red
+        }
+        /* 스타일을 구분지어서 지정해주고 싶을 때
+        -> 클래스, 아이디 속성 사용
+        클래스 : 중복가능, 재사용성이 뛰어남
+        아이디 : 중복불가능!!!
+        한 html 문서당 그 아이디는 한 번만 쓰기
+        (로고, 검색창, 상단바 같은 고유한 디자인)
+        */
+
+    </style>
+
+</head>
+<body>
+    <h1>나를 행복하게 하는 것</h1>
+    <h2>스마트인재개발원 조진우</h2>
+    <span class="'like">베리굿베이글</span><br>
+    <span class="'like" id="nap">누워서 자거나 빈둥빈둥</span><br>
+    <span class="'like">달리기</span>
+</body>
+</html>
